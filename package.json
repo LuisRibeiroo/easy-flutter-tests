@@ -46,22 +46,18 @@
     "commands": [
       {
         "command": "easy-tests.goToTestFile",
-        "title": "Better Tests: Go to tests",
+        "title": "Easy Tests: Go to tests",
         "icon": "./assets/swap.png"
       },
       {
         "command": "easy-tests.goToSourceFile",
-        "title": "Better Tests: Go to source file",
+        "title": "Easy Tests: Go to source file",
         "icon": "./assets/swap.png"
       },
       {
         "command": "easy-tests.executeTestsInTestFile",
-        "title": "Better Tests: Run tests for file",
+        "title": "Easy Tests: Run tests for file",
         "icon": "./assets/run_tests.png"
-      },
-      {
-        "command": "extension.addConsoleLog",
-        "title": "TEST: Add Console Log"
       }
     ],
     "keybindings": [
