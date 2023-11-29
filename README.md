@@ -43,4 +43,5 @@ Boost your TDD-Workflow by:
 This extension contributes the following settings:
 
 `easy-tests.codePath`: Dart code files path within workspace root
+
 `easy-tests.testsPath`: Test files path within workspace root

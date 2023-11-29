@@ -1,9 +1,9 @@
 {
   "name": "easy-tests",
   "displayName": "Easy Flutter Tests",
-  "description": "This is a Fork from [Better Flutter Tests](https://marketplace.visualstudio.com/items?itemName=andreasblech.better-tests) with configurable path and testPath.\nThis Extension makes it much easier to create and maintain unit tests for flutter projects.",
-  "version": "0.0.1",
-  "publisher": "LuisRibeiroo",
+  "description": "Create, run and maintain Dart/Flutter test files easily",
+  "version": "0.0.2",
+  "publisher": "LuisRibeiro",
   "engines": {
     "vscode": "^1.84.2"
   },
@@ -26,7 +26,7 @@
     "testing"
   ],
   "galleryBanner": {
-    "color": "#FFFFFF"
+    "color": "#FFFFFFFF"
   },
   "icon": "assets/logo.png",
   "activationEvents": [

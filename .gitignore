@@ -4,3 +4,4 @@ node_modules
 *.vsix
 
 NOTE.md
+.DS_Store
