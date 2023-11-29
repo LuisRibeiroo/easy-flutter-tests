@@ -4,6 +4,7 @@ import * as path from "path";
 
 import * as fileOperations from "../file_operations";
 import * as testFileCreator from "../test_file_creator";
+import { getConfig } from "../extension";
 
 export function activate(context: vscode.ExtensionContext) {
   // The command has been defined in the package.json file
@@ -51,8 +52,10 @@ export function activate(context: vscode.ExtensionContext) {
         } else if (fileOperations.isTestFile(path)) {
           //Do nothing, because we are already in the test file
         } else {
+          const { codePath } = getConfig();
+
           vscode.window.showErrorMessage(
-            path + " is not in the /lib path of this directory"
+            path + ` is not in the ${codePath} path of this directory`
           );
         }
       } else {

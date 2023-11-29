@@ -47,8 +47,6 @@ export function createTestFile(
           throw err;
         }
 
-        //console.log("Test File created");
-
         vscode.window.showInformationMessage("Success: Test File Created!");
         fileOperations.openDocumentInEditor(pathOfTestFile);
       });
