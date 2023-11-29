@@ -8,9 +8,7 @@ export function isPathInLibFolder(path: string): boolean {
   const { codePath } = getConfig();
 
   var libPath = vscode.workspace.rootPath + "/" + codePath;
-  var t = path.indexOf(libPath) === 0;
-
-  return t;
+  return path.indexOf(libPath) === 0;
 }
 
 export function isTestFile(filePath: string): boolean {
