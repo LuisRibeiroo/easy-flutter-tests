@@ -1,162 +1,161 @@
 {
-	"name": "better-tests",
-	"displayName": "Better Flutter Tests",
-	"description": "This Extension makes it much easier to create and maintain unit tests for flutter projects.",
-	"version": "0.3.0",
-	"publisher": "andreasblech",
-	"engines": {
-		"vscode": "^1.52.0"
-	},
-	"categories": [
-		"Programming Languages",
-		"Snippets"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://bitbucket.org/ThePeacefulCoder/better-flutter-tests/src/master/"
-	},
-	"keywords": [
-		"flutter",
-		"clean code",
-		"dart",
-		"tdd",
-		"test driven development",
-		"unit tests",
-		"test",
-		"testing"
-	],
-	"galleryBanner": {
-		"color": "#FFFFFF"
-	},
-	"icon": "assets/logo.png",
-	"activationEvents": [
-		"onLanguage:dart",
-		"onCommand:better-tests.goToTestFile",
-		"onCommand:better-tests.goToSourceFile",
-		"onCommand:better-tests.executeTestsInTestFile"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"snippets": [
-			{
-				"language": "dart",
-				"path": "snippets/snippets.json"
-			}
-		],
-		"commands": [
-			{
-				"command": "better-tests.goToTestFile",
-				"title": "Better Tests: Go to tests",
-				"icon": "./assets/swap.png"
-			},
-			{
-				"command": "better-tests.goToSourceFile",
-				"title": "Better Tests: Go to source file",
-				"icon": "./assets/swap.png"
-			},
-			{
-				"command": "better-tests.executeTestsInTestFile",
-				"title": "Better Tests: Run tests for file",
-				"icon": "./assets/run_tests.png"
-			},
-			{
-				"command": "extension.addConsoleLog",
-				"title": "TEST: Add Console Log"
-			}
-		],
-		"keybindings": [
-			{
-				"command": "better-tests.goToTestFile",
-				"key": "ctrl+T",
-				"mac": "cmd+T",
-				"when": "resourceLangId == dart && resourceFilename =~ /(?<!_test)\\.dart/"
-			},
-			{
-				"command": "better-tests.goToSourceFile",
-				"key": "ctrl+T",
-				"mac": "cmd+T",
-				"when": "resourceLangId == dart && resourceFilename =~ /_test.dart/"
-			},
-			{
-				"command": "better-tests.executeTestsInTestFile",
-				"key": "ctrl+alt+T",
-				"mac": "cmd+alt+T",
-				"when": "resourceLangId == dart"
-			}
-		],
-		"menus": {
-			"touchBar": [
-				{
-					"when": "resourceLangId == dart && resourceFilename =~ /(?<!_test)\\.dart/",
-					"command": "better-tests.goToTestFile",
-					"group": "nasc"
-				},
-				{
-					"when": "resourceLangId == dart && resourceFilename =~ /_test.dart/",
-					"command": "better-tests.goToSourceFile",
-					"group": "nasc"
-				},
-				{
-					"when": "resourceLangId == dart",
-					"command": "better-tests.executeTestsInTestFile",
-					"group": "nasc"
-				}
-			],
-			"explorer/context": [
-				{
-					"when": "resourceLangId == dart && resourceFilename =~ /(?<!_test)\\.dart/",
-					"command": "better-tests.goToTestFile",
-					"group": "1_modification"
-				},
-				{
-					"when": "resourceLangId == dart && resourceFilename =~ /_test.dart/",
-					"command": "better-tests.goToSourceFile",
-					"group": "1_modification"
-				},
-				{
-					"when": "resourceLangId == dart",
-					"command": "better-tests.executeTestsInTestFile",
-					"group": "1_modification"
-				}
-			],
-			"editor/context": [
-				{
-					"when": "resourceLangId == dart && resourceFilename =~ /(?<!_test)\\.dart/",
-					"command": "better-tests.goToTestFile",
-					"group": "1_modification"
-				},
-				{
-					"when": "resourceLangId == dart && resourceFilename =~ /_test.dart/",
-					"command": "better-tests.goToSourceFile",
-					"group": "1_modification"
-				},
-				{
-					"when": "resourceLangId == dart",
-					"command": "better-tests.executeTestsInTestFile",
-					"group": "1_modification"
-				}
-			]
-		}
-	},
-	"scripts": {
-		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"lint": "eslint src --ext ts",
-		"watch": "tsc -watch -p ./",
-		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.47.0",
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^7.0.2",
-		"@types/node": "^13.11.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.30.0",
-		"@typescript-eslint/eslint-plugin": "^2.30.0",
-		"glob": "^7.1.6",
-		"mocha": "^7.1.2",
-		"typescript": "^3.8.3",
-		"vscode-test": "^1.3.0"
-	}
+  "name": "easy-tests",
+  "displayName": "Easy Flutter Tests",
+  "description": "This is a Fork from [Better Flutter Tests](https://marketplace.visualstudio.com/items?itemName=andreasblech.better-tests) with configurable path and testPath.\nThis Extension makes it much easier to create and maintain unit tests for flutter projects.",
+  "version": "0.0.1",
+  "publisher": "LuisRibeiroo",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuisRibeiroo/easy-flutter-tests"
+  },
+  "keywords": [
+    "flutter",
+    "clean code",
+    "dart",
+    "tdd",
+    "test driven development",
+    "unit tests",
+    "test",
+    "testing"
+  ],
+  "galleryBanner": {
+    "color": "#FFFFFF"
+  },
+  "icon": "assets/logo.png",
+  "activationEvents": [
+    "onLanguage:dart",
+    "onCommand:easy-tests.goToTestFile",
+    "onCommand:easy-tests.goToSourceFile",
+    "onCommand:easy-tests.executeTestsInTestFile"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "dart",
+        "path": "snippets/snippets.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "easy-tests.goToTestFile",
+        "title": "Better Tests: Go to tests",
+        "icon": "./assets/swap.png"
+      },
+      {
+        "command": "easy-tests.goToSourceFile",
+        "title": "Better Tests: Go to source file",
+        "icon": "./assets/swap.png"
+      },
+      {
+        "command": "easy-tests.executeTestsInTestFile",
+        "title": "Better Tests: Run tests for file",
+        "icon": "./assets/run_tests.png"
+      },
+      {
+        "command": "extension.addConsoleLog",
+        "title": "TEST: Add Console Log"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "easy-tests.goToTestFile",
+        "key": "ctrl+T",
+        "mac": "cmd+T",
+        "when": "resourceLangId == dart && resourceFilename =~ /(?<!_test)\\.dart/"
+      },
+      {
+        "command": "easy-tests.goToSourceFile",
+        "key": "ctrl+T",
+        "mac": "cmd+T",
+        "when": "resourceLangId == dart && resourceFilename =~ /_test.dart/"
+      },
+      {
+        "command": "easy-tests.executeTestsInTestFile",
+        "key": "ctrl+alt+T",
+        "mac": "cmd+alt+T",
+        "when": "resourceLangId == dart"
+      }
+    ],
+    "menus": {
+      "touchBar": [
+        {
+          "when": "resourceLangId == dart && resourceFilename =~ /(?<!_test)\\.dart/",
+          "command": "easy-tests.goToTestFile",
+          "group": "nasc"
+        },
+        {
+          "when": "resourceLangId == dart && resourceFilename =~ /_test.dart/",
+          "command": "easy-tests.goToSourceFile",
+          "group": "nasc"
+        },
+        {
+          "when": "resourceLangId == dart",
+          "command": "easy-tests.executeTestsInTestFile",
+          "group": "nasc"
+        }
+      ],
+      "explorer/context": [
+        {
+          "when": "resourceLangId == dart && resourceFilename =~ /(?<!_test)\\.dart/",
+          "command": "easy-tests.goToTestFile",
+          "group": "1_modification"
+        },
+        {
+          "when": "resourceLangId == dart && resourceFilename =~ /_test.dart/",
+          "command": "easy-tests.goToSourceFile",
+          "group": "1_modification"
+        },
+        {
+          "when": "resourceLangId == dart",
+          "command": "easy-tests.executeTestsInTestFile",
+          "group": "1_modification"
+        }
+      ],
+      "editor/context": [
+        {
+          "when": "resourceLangId == dart && resourceFilename =~ /(?<!_test)\\.dart/",
+          "command": "easy-tests.goToTestFile",
+          "group": "1_modification"
+        },
+        {
+          "when": "resourceLangId == dart && resourceFilename =~ /_test.dart/",
+          "command": "easy-tests.goToSourceFile",
+          "group": "1_modification"
+        },
+        {
+          "when": "resourceLangId == dart",
+          "command": "easy-tests.executeTestsInTestFile",
+          "group": "1_modification"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint src --ext ts",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^13.11.0",
+    "@types/vscode": "^1.84.2",
+    "@typescript-eslint/eslint-plugin": "^2.30.0",
+    "@typescript-eslint/parser": "^2.30.0",
+    "eslint": "^6.8.0",
+    "glob": "^7.1.6",
+    "mocha": "^7.1.2",
+    "typescript": "^3.8.3"
+  }
 }
