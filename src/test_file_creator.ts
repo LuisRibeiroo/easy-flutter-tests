@@ -60,7 +60,7 @@ export function createTestFile(
   }
 }
 
-function getPackagePath(originalFilePath: string): string {
+export function getPackagePath(originalFilePath: string): string {
   var relativePath =
     fileOperations.getRelativePathInLibFolder(originalFilePath);
 
