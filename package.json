@@ -2,7 +2,7 @@
   "name": "easy-tests",
   "displayName": "Easy Flutter Tests",
   "description": "Create, run and maintain Dart/Flutter test files easily",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "LuisRibeiro",
   "engines": {
     "vscode": "^1.84.2"
@@ -37,6 +37,21 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Easy Flutter Tests",
+      "properties": {
+        "easy-tests.codePath": {
+          "type": "string",
+          "default": "lib",
+          "description": "The path to the code folder (worskpace root is the starting point)"
+        },
+        "easy-tests.testsPath": {
+          "type": "string",
+          "default": "test",
+          "description": "The path to the test folder (workspace root is the starting point)"
+        }
+      }
+    },
     "snippets": [
       {
         "language": "dart",
